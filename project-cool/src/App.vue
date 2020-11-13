@@ -3,6 +3,7 @@
     <v-main>
       <NavigationBar />
     </v-main>
+    <router-view></router-view>
   </v-app>
 </template>
 

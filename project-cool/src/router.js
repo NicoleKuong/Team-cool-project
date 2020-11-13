@@ -1,15 +1,16 @@
 import Vue from "vue";
 import Router from "vue-router";
+import LandingPage from "../src/components/LandingPage.vue";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    // {
-    //   path: "/transactions",
-    //   name: "Transactions",
-    //   component: Transactions,
-    // },
+    {
+      path: "/",
+      name: "landingPage",
+      component: LandingPage,
+    },
     // {
     //   path: "/rankings",
     //   name: "Rankings",

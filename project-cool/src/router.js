@@ -1,6 +1,7 @@
 import Vue from "vue";
 import Router from "vue-router";
 import LandingPage from "../src/components/LandingPage.vue";
+import Rankings from "../src/components/Rankings.vue";
 
 Vue.use(Router);
 
@@ -11,11 +12,11 @@ export default new Router({
       name: "landingPage",
       component: LandingPage,
     },
-    // {
-    //   path: "/rankings",
-    //   name: "Rankings",
-    //   component: Rankings,
-    // },
+    {
+      path: "/rankings",
+      name: "Rankings",
+      component: Rankings,
+    },
     // {
     //   path: "/statistics",
     //   name: "Statistics",

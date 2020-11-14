@@ -1,0 +1,44 @@
+{
+    "bins": [
+        {
+            "country": "India",
+            "colletedPlastic": 245
+        },
+        {
+            "country": "Netherlands",
+            "colletedPlastic": 123
+        },
+        {
+            "country": "Netherlands",
+            "colletedPlastic": 12
+        },
+        {
+            "country": "Netherlands",
+            "colletedPlastic": 445
+        },
+        {
+            "country": "Netherlands",
+            "colletedPlastic": 23
+        },
+        {
+            "country": "Germany",
+            "colletedPlastic": 43
+        },
+        {
+            "country": "Cambodia",
+            "colletedPlastic": 54
+        },
+        {
+            "country": "China",
+            "colletedPlastic": 23
+        },
+        {
+            "country": "France",
+            "colletedPlastic": 43
+        },
+        {
+            "country": "Italy",
+            "colletedPlastic": 89
+        }
+    ]
+}

@@ -1,16 +1,17 @@
 import Vue from "vue";
 import Router from "vue-router";
 import LandingPage from "../src/components/LandingPage.vue";
-import Transactions from '../src/components/Transactions.vue';
+import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
+import UserProfile from "../src/components/UserProfile.vue";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      name: 'landingPage',
+      path: "/",
+      name: "landingPage",
       component: LandingPage,
     },
     {
@@ -19,20 +20,15 @@ export default new Router({
       component: Rankings,
     },
     {
-      path: '/transactions',
-      name: 'transactions',
+      path: "/myaccount/transactions",
+      name: "transactions",
       component: Transactions,
     },
-    // {
-    //   path: "/statistics",
-    //   name: "Statistics",
-    //   component: Statistics,
-    // },
-    // {
-    //   path: "/sendtoken",
-    //   name: "Send Token",
-    //   component: SendToken,
-    // },
+    {
+      path: "/myaccount",
+      name: "myaccount",
+      component: UserProfile,
+    },
   ],
-  mode: 'history',
+  mode: "history",
 });

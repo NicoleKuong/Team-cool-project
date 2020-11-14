@@ -34,10 +34,12 @@
         <v-btn icon>
           <v-icon>fas fa-bell</v-icon>
         </v-btn>
-        <v-btn icon>
-          <v-icon>fas fa-user-circle</v-icon>
-        </v-btn>
-        <span>Cool Member</span>
+        <router-link class="toUserProfile" to="/myaccount">
+          <v-btn icon>
+            <v-icon>fas fa-user-circle</v-icon>
+          </v-btn>
+          <span>My profile</span>
+        </router-link>
       </v-toolbar>
     </v-card>
   </div>
@@ -70,5 +72,8 @@ export default {
   &_items {
     text-align: center;
   }
+}
+.toUserProfile {
+  text-decoration: none;
 }
 </style>

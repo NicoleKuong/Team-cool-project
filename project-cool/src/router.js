@@ -4,6 +4,7 @@ import LandingPage from "../src/components/LandingPage.vue";
 import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
 import UserProfile from "../src/components/UserProfile.vue";
+import SendToken from "../src/components/SendToken.vue";
 
 Vue.use(Router);
 
@@ -28,6 +29,11 @@ export default new Router({
       path: "/myaccount",
       name: "myaccount",
       component: UserProfile,
+    },
+    {
+      path: "/sendtokens",
+      name: "sendToken",
+      component: SendToken,
     },
   ],
   mode: "history",

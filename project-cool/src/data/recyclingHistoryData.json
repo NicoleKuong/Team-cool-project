@@ -10,11 +10,23 @@
             ],
             "density": 3,
             "weight": 100,
-            "bin": 0,
-            "txIds": [
-                1,
-                2
-            ]
+            "emissionSaved": 1.8,
+            "bin": 1,
+            "receiver": "User1"
+        },
+        {
+            "timestamp": 1605098617565,
+            "plasticType": 0,
+            "dimensions": [
+                10,
+                10,
+                21
+            ],
+            "density": 3,
+            "weight": 100,
+            "emissionSaved": 1.8,
+            "bin": 1,
+            "receiver": "User1"
         },
         {
             "timestamp": 1605098619565,
@@ -26,11 +38,9 @@
             ],
             "density": 3,
             "weight": 100,
+            "emissionSaved": 1.8,
             "bin": 0,
-            "txIds": [
-                3,
-                4
-            ]
+            "receiver": "User2"
         }
     ]
 }

@@ -1,16 +1,18 @@
 <template>
   <div>
-    <h3>Transactions</h3>
-    <h4>Balance</h4>
-    <div class="block-inline">
-      <div class="left">{{ getBalance("COOL") }} COOL</div>
-      <div class="right">{{ getBalance("SAVER") }} SAVER</div>
+    <h1 class="transactions_title">Transactions</h1>
+    <h2 class="transactions_subtitle">Balance</h2>
+    <div class="transactions_balance">
+      <span>{{ getBalance("COOL") }} COOL</span> &nbsp;
+      <span>{{ getBalance("SAVER") }} SAVER</span>
     </div>
-    <p>The transactions have to be sorted based on the timestamp</p>
 
+    <!-- <v-btn @click="getAllTransactions()">All</v-btn>
+    <v-btn @click="getSentTransactions(userAddress)">Send</v-btn>
+    <v-btn @click="getReceivedTransactions(userAddress)">Received</v-btn> -->
     <v-simple-table width="50%">
       <template v-slot:default>
-        <tbody v-for="tx in transactionData" :key="tx">
+        <tbody v-for="tx in transactionsHistory" :key="tx">
           <tr :class="getCssTransactionStatus(tx.sender, tx.recipient)">
             <td class="pa-2">
               <h4 :class="tx.tokenName">
@@ -58,7 +60,7 @@ export default {
   name: "Transactions",
   data() {
     return {
-      transactionData: transactionData.transactionData,
+      transactionsHistory: transactionData.transaction,
       userAddress: "3PBSHtr4znZEEjCkgxd1CzGXT18m9eFdpYH",
       marketValueSaverUSD: 1.45,
     };
@@ -67,8 +69,10 @@ export default {
     getBalance(token) {
       let balance = 0;
 
-      for (let i = 0; i < this.transactionData.length; i++) {
-        let { tokenName, amount, recipient, sender } = this.transactionData[i];
+      for (let i = 0; i < this.transactionsHistory.length; i++) {
+        let { tokenName, amount, recipient, sender } = this.transactionsHistory[
+          i
+        ];
 
         if (token == tokenName && this.userAddress == recipient)
           balance += amount;
@@ -125,22 +129,36 @@ export default {
         return "d-none";
       }
     },
+    // getSentTransactions(address) {
+    //   const sentTransactions = this.transactionsHistory.filter(
+    //     (each) => each.address === address
+    //   );
+    //   return (this.showTransactions = sentTransactions);
+    // },
+    // getReceivedTransactions(address) {
+    //   const receivedTransactions = this.transactionsHistory.filter(
+    //     (each) => each.address !== address
+    //   );
+    //   return (this.showTransactions = receivedTransactions);
+    // },
+    // getAllTransactions() {
+    //   return (this.showTransactions = this.transactionsHistory);
+    // },
   },
 };
 </script>
 
-<style scoped>
-.block-inline {
-  display: inline-block;
-  margin: auto;
-}
-.left {
-  float: left;
-  padding: 0 10px;
-}
-.right {
-  float: right;
-  padding: 0 10px;
+<style scoped lang="scss">
+.transactions {
+  &_title {
+    text-align: center;
+  }
+  &_subtitle {
+    text-align: center;
+  }
+  &_balance {
+    text-align: center;
+  }
 }
 
 .v-data-table {

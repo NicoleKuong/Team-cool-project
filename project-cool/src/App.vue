@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import NavigationBar from "./components/NavigationBar";
+import NavigationBar from './components/NavigationBar';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
     NavigationBar,
@@ -22,3 +22,10 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+* {
+  background-color: #2e5eaa;
+  color: white;
+}
+</style>

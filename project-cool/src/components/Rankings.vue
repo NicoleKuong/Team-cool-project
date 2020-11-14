@@ -1,7 +1,7 @@
 <template>
-  <v-simple-table>
+  <v-simple-table class="ranking_table">
     <template v-slot:default>
-      <thead>
+      <thead class="ranking_heading">
         <tr>
           <td><p>Position</p></td>
           <td><p>Address</p></td>
@@ -10,26 +10,16 @@
           <td><p>Recycled items</p></td>
         </tr>
       </thead>
-      <tbody>
+      <tbody v-for="user in users" :key="user.address">
         <tr>
-          <td>1234</td>
-          <td>{{ userAddress }}</td>
-          <td>0.2</td>
-          <td>0.1</td>
-          <td>1</td>
-        </tr>
-      </tbody>
-      <tbody v-for="position in balances" :key="position">
-        <tr>
-          <td>{{ balances.indexOf(position) + 1 }}</td>
-          <td>{{ position.address }}</td>
-          <td>{{ position.totalWeight }}</td>
-          <td>{{ position.totalEmissionSaved }}</td>
-          <td>{{ position.visitedBins }}</td>
+          <td>{{ users.indexOf(user) + 1 }}</td>
+          <td>{{ user.address }}</td>
+          <td>{{ getTotalWeight(user.userId) }}</td>
+          <td>{{ getTotalEmissionSaved(user.userId) }}</td>
+          <td>{{ getTotalVistedBins(user.userId) }}</td>
         </tr>
       </tbody>
     </template>
-    {{ createBalanceArray()[0] }}
   </v-simple-table>
 </template>
 
@@ -44,84 +34,76 @@ export default {
       transactionData: transactionData.transactions,
       recyclingHistoryData: recyclingHistoryData.recyclingHistory,
       userAddress: "3PGfXB5bEz7EkbtGMNUYop5aior5X6bUbvL",
-      ranking: [
+      users: [
         {
-          address: "User1",
-          totalEmissionSaved: 3.6,
-          totalWeight: 0.1,
+          userId: "User1",
+          address: "ABC",
           recycleCounter: 2,
         },
         {
-          address: "User2",
-          totalEmissionSaved: 1.8,
-          totalWeight: 0.1,
+          userId: "User2",
+          address: "DEF",
           recycleCounter: 1,
         },
       ],
     };
   },
-  computed: {
-    getTotals() {
-      console.log(this.createBalanceArray());
-      return "bye";
-    },
-  },
   methods: {
-    createBalanceArray() {
-      const emissionSaved = this.recyclingHistoryData.reduce((a, b) => {
-        return a.emissionSaved + b.emissionSaved;
-      });
-
-      const weight = this.recyclingHistoryData.reduce((a, b) => {
-        return a.weight + b.weight;
-      });
-
-      console.log(weight);
-      console.log(emissionSaved);
-      return "Hello";
-      // for (let i = 0; i < this.recyclingHistoryData.length; i++) {
-
-      //     const { bin, weight, txIds, emissionSaved } = this.recyclingHistoryData[
-      //       i
-      //     ];
-
-      //     let totalWeight = 0;
-      //     let totalEmissionSaved = 0;
-      //     let recycleCounter = [];
-
-      //     let address = this.transactionData[txIds[0]].recipient;
-
-      //     //TODO get the totalWeight and totalEmissionSaved
-
-      //     totalWeight = weight / 1000; // devide weight by 1000 to get from grams to kilograms
-      //     totalEmissionSaved += emissionSaved;
-      //     recycleCounter.push(bin);
-
-      //     rankings.push({
-      //       address,
-      //       totalWeight,
-      //       totalEmissionSaved,
-      //       recycleCounter: recycleCounter.length,
-      //     });
-
-      //     this.balances.push({
-      //       address,
-      //       totalWeight,
-      //       totalEmissionSaved,
-      //       recycleCounter: recycleCounter.length,
-      //     });
-      //   }
-      //   console.log(this.balances);
-      //   console.log(rankings);
-      //   return rankings;
+    getTotalEmissionSaved(userId) {
+      let totalEmissionSaved = 0;
+      const findHistoryForUser = this.recyclingHistoryData.filter(
+        (eachData) => eachData.receiver === userId
+      );
+      if (findHistoryForUser.length > 1) {
+        totalEmissionSaved = findHistoryForUser.reduce((a, b) => {
+          return a.emissionSaved + b.emissionSaved;
+        });
+      } else {
+        totalEmissionSaved = findHistoryForUser[0].emissionSaved;
+      }
+      return totalEmissionSaved;
+    },
+    getTotalWeight(userId) {
+      let totalWeight = 0;
+      const findHistoryForUser = this.recyclingHistoryData.filter(
+        (eachData) => eachData.receiver === userId
+      );
+      if (findHistoryForUser.length > 1) {
+        totalWeight = findHistoryForUser.reduce((a, b) => {
+          return a.weight + b.weight;
+        });
+      } else {
+        totalWeight = findHistoryForUser[0].weight;
+      }
+      return totalWeight;
+    },
+    getTotalVistedBins(userId) {
+      let totalBins = 0;
+      const findHistoryForUser = this.recyclingHistoryData.filter(
+        (eachData) => eachData.receiver === userId
+      );
+      if (findHistoryForUser.length > 1) {
+        totalBins = findHistoryForUser.reduce((a, b) => {
+          return a.bin + b.bin;
+        });
+      } else {
+        totalBins = findHistoryForUser[0].bin;
+      }
+      return totalBins;
     },
   },
 };
 </script>
 
-<style scoped>
-.v-data-table {
-  width: 80%;
-  margin: auto;
+<style scoped lang="scss">
+.ranking {
+  &_table {
+    width: 80%;
+    margin: 30px auto;
+    border: 1px solid black;
+  }
+  &_heading {
+    font-weight: bold;
+  }
 }
 </style>

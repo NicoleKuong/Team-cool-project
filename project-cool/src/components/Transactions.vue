@@ -1,9 +1,11 @@
 <template>
   <div>
-    <v-subheader>Transactions</v-subheader>
+    <h3>Transactions</h3>
     <h4>Balance</h4>
-    <p>{{ getBalance('COOL') }} COOL</p>
-    <p>{{ getBalance('SAVER') }} SAVER</p>
+    <div class="block-inline">
+      <div class="left">{{ getBalance("COOL") }} COOL</div>
+      <div class="right">{{ getBalance("SAVER") }} SAVER</div>
+    </div>
     <p>The transactions have to be sorted based on the timestamp</p>
 
     <v-simple-table width="50%">
@@ -21,9 +23,25 @@
               </p>
             </td>
             <td class="pa-2">
-              <h4>{{ tx.amount }} {{ tx.tokenName }}</h4>
+              <h4>
+                {{
+                  getTransactionAmount(
+                    tx.sender,
+                    tx.recipient,
+                    tx.amount,
+                    tx.tokenName
+                  )
+                }}
+              </h4>
               <p class="ma-0">
-                {{ convertTokenToUSD(tx.tokenName, tx.amount) }} USD
+                {{
+                  getTransactionAmountUSD(
+                    tx.sender,
+                    tx.recipient,
+                    tx.amount,
+                    tx.tokenName
+                  )
+                }}
               </p>
             </td>
           </tr>
@@ -34,10 +52,17 @@
 </template>
 
 <script>
-import transactionData from '../data/transactionData.json';
+import transactionData from "../data/transactionData.json";
 
 export default {
-  name: 'Transactions',
+  name: "Transactions",
+  data() {
+    return {
+      transactionData: transactionData.transactionData,
+      userAddress: "3PBSHtr4znZEEjCkgxd1CzGXT18m9eFdpYH",
+      marketValueSaverUSD: 1.45,
+    };
+  },
   methods: {
     getBalance(token) {
       let balance = 0;
@@ -45,67 +70,81 @@ export default {
       for (let i = 0; i < this.transactionData.length; i++) {
         let { tokenName, amount, recipient, sender } = this.transactionData[i];
 
-        if (token == tokenName && this.userAddress == recipient) balance += amount;
-        else if (token == tokenName && this.userAddress == sender) balance -= amount;
+        if (token == tokenName && this.userAddress == recipient)
+          balance += amount;
+        else if (token == tokenName && this.userAddress == sender)
+          balance -= amount;
       }
-      
+
       return balance.toFixed(1);
     },
     convertTimestamp(timestamp) {
-      let date = new Date(timestamp);
+      const date = new Date(timestamp);
       return `${date.getDate()}-${date.getMonth()}-${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
     },
-    convertTokenToUSD(token, amount) {
-      if (token === 'COOL') {
-        const value = amount * 1;
-        return value;
-      } else if (token === 'SAVER') {
-        // Calculate what the market value could be
-        const value = amount * this.marketValueSaverUSD;
-        return value.toFixed(2);
-      } else {
-        return 'Convert to USD Error';
+    getTransactionAmount(sender, receiver, amount, token) {
+      if (sender == this.userAddress) {
+        return `- ${amount} ${token}`;
+      } else if (receiver == this.userAddress) {
+        return `+ ${amount} ${token}`;
+      }
+    },
+    getTransactionAmountUSD(sender, receiver, amount, token) {
+      if (token === "COOL" && sender == this.userAddress) {
+        return `- ${amount} USD`;
+      } else if (token === "COOL" && receiver == this.userAddress) {
+        return `+ ${amount} USD`;
+      } else if (token === "SAVER" && sender == this.userAddress) {
+        return `- ${amount * this.marketValueSaverUSD} USD`;
+      } else if (token === "SAVER" && receiver == this.userAddress) {
+        return `+ ${amount * this.marketValueSaverUSD} USD`;
       }
     },
     getTransactionStatus(sender, receiver) {
       //If the wallet from the user is equal to the address of the sender show that he send the transactions
       if (sender == this.userAddress) {
-        return 'Send';
+        return "Send";
       } else if (receiver == this.userAddress) {
-        return 'Received';
+        return "Received";
       }
     },
     getToOrFromAddress(sender, receiver) {
       // If the wallet is from the sender show the address who recieved the tokens. If the wallet is from the recipient show the address who send the tokens
       if (sender == this.userAddress) {
-        return `to ${receiver}`;
+        return `to address ${receiver}`;
       } else if (receiver == this.userAddress) {
-        return `from ${sender}`;
+        return `from address ${sender}`;
       }
     },
     getCssTransactionStatus(sender, receiver) {
       if (sender === this.userAddress) {
-        return 'send';
+        return "send";
       } else if (receiver === this.userAddress) {
-        return 'received';
+        return "received";
       } else {
-        return 'd-none';
+        return "d-none";
       }
     },
-  },
-  data() {
-    return {
-      transactionData: transactionData.transactionData,
-      userAddress: '3PGfXB5bEz7EkbtGMNUYop5aior5X6bUbvL',
-      marketValueSaverUSD: 1.2
-    };
   },
 };
 </script>
 
 <style scoped>
+.block-inline {
+  display: inline-block;
+  margin: auto;
+}
+.left {
+  float: left;
+  padding: 0 10px;
+}
+.right {
+  float: right;
+  padding: 0 10px;
+}
+
 .v-data-table {
-  max-width: 50%;
+  max-width: 80%;
   margin: auto;
 }
 tr.send {

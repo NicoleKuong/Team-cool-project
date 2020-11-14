@@ -6,13 +6,30 @@
       <span>{{ getBalance("COOL") }} COOL</span> &nbsp;
       <span>{{ getBalance("SAVER") }} SAVER</span>
     </div>
+    <div class="transactions_button">
+      <v-btn
+        outlined
+        class="transactions_button-1"
+        @click="getAllTransactions()"
+        >All</v-btn
+      >
+      <v-btn
+        outlined
+        class="transactions_button-2"
+        @click="getSentTransactions(userAddress)"
+        >Send</v-btn
+      >
+      <v-btn
+        outlined
+        class="transactions_button-3"
+        @click="getReceivedTransactions(userAddress)"
+        >Received</v-btn
+      >
+    </div>
 
-    <!-- <v-btn @click="getAllTransactions()">All</v-btn>
-    <v-btn @click="getSentTransactions(userAddress)">Send</v-btn>
-    <v-btn @click="getReceivedTransactions(userAddress)">Received</v-btn> -->
     <v-simple-table width="50%">
       <template v-slot:default>
-        <tbody v-for="tx in transactionsHistory" :key="tx">
+        <tbody v-for="tx in showTransactions" :key="tx.id">
           <tr :class="getCssTransactionStatus(tx.sender, tx.recipient)">
             <td class="pa-2">
               <h4 :class="tx.tokenName">
@@ -63,6 +80,7 @@ export default {
       transactionsHistory: transactionData.transaction,
       userAddress: "3PBSHtr4znZEEjCkgxd1CzGXT18m9eFdpYH",
       marketValueSaverUSD: 1.45,
+      showTransactions: [],
     };
   },
   methods: {
@@ -129,21 +147,21 @@ export default {
         return "d-none";
       }
     },
-    // getSentTransactions(address) {
-    //   const sentTransactions = this.transactionsHistory.filter(
-    //     (each) => each.address === address
-    //   );
-    //   return (this.showTransactions = sentTransactions);
-    // },
-    // getReceivedTransactions(address) {
-    //   const receivedTransactions = this.transactionsHistory.filter(
-    //     (each) => each.address !== address
-    //   );
-    //   return (this.showTransactions = receivedTransactions);
-    // },
-    // getAllTransactions() {
-    //   return (this.showTransactions = this.transactionsHistory);
-    // },
+    getSentTransactions(address) {
+      const sentTransactions = this.transactionsHistory.filter(
+        (each) => each.sender === address
+      );
+      return (this.showTransactions = sentTransactions);
+    },
+    getReceivedTransactions(address) {
+      const receivedTransactions = this.transactionsHistory.filter(
+        (each) => each.sender !== address
+      );
+      return (this.showTransactions = receivedTransactions);
+    },
+    getAllTransactions() {
+      return (this.showTransactions = this.transactionsHistory);
+    },
   },
 };
 </script>
@@ -158,6 +176,21 @@ export default {
   }
   &_balance {
     text-align: center;
+  }
+  &_button {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    &-1 {
+      margin-right: 10px;
+    }
+    &-2 {
+      margin-left: 10px;
+    }
+    &-3 {
+      margin-left: 10px;
+    }
   }
 }
 

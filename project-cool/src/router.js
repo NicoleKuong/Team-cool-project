@@ -15,7 +15,7 @@ export default new Router({
       component: LandingPage,
     },
     {
-      path: "/rankings",
+      path: "/ranking",
       name: "Rankings",
       component: Rankings,
     },

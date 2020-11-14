@@ -1,26 +1,29 @@
 <template>
-  <v-simple-table class="ranking_table">
-    <template v-slot:default>
-      <thead class="ranking_heading">
-        <tr>
-          <td><p>Position</p></td>
-          <td><p>Address</p></td>
-          <td><p>Recycled plastic (kg)</p></td>
-          <td><p>Saved emission (kg)</p></td>
-          <td><p>Recycled items</p></td>
-        </tr>
-      </thead>
-      <tbody v-for="user in users" :key="user.address">
-        <tr>
-          <td>{{ users.indexOf(user) + 1 }}</td>
-          <td>{{ user.address }}</td>
-          <td>{{ getTotalWeight(user.userId) }}</td>
-          <td>{{ getTotalEmissionSaved(user.userId) }}</td>
-          <td>{{ getTotalVistedBins(user.userId) }}</td>
-        </tr>
-      </tbody>
-    </template>
-  </v-simple-table>
+  <div>
+    <h1 class="ranking_title">Ranking</h1>
+    <v-simple-table class="ranking_table">
+      <template v-slot:default>
+        <thead class="ranking_heading">
+          <tr>
+            <td><p>Position</p></td>
+            <td><p>Address</p></td>
+            <td><p>Recycled plastic (kg)</p></td>
+            <td><p>Saved emission (kg)</p></td>
+            <td><p>Recycled items</p></td>
+          </tr>
+        </thead>
+        <tbody v-for="user in users" :key="user.address">
+          <tr>
+            <td>{{ users.indexOf(user) + 1 }}</td>
+            <td>{{ user.address }}</td>
+            <td>{{ getTotalWeight(user.userId) }}</td>
+            <td>{{ getTotalEmissionSaved(user.userId) }}</td>
+            <td>{{ getTotalVistedBins(user.userId) }}</td>
+          </tr>
+        </tbody>
+      </template>
+    </v-simple-table>
+  </div>
 </template>
 
 <script>
@@ -97,6 +100,9 @@ export default {
 
 <style scoped lang="scss">
 .ranking {
+  &_title {
+    text-align: center;
+  }
   &_table {
     width: 80%;
     margin: 30px auto;

@@ -3,6 +3,7 @@ import Router from "vue-router";
 import LandingPage from "../src/components/LandingPage.vue";
 import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
+import Statistics from "../src/components/Statistics.vue";
 import RankingsCountry from "../src/components/RankingsCountry.vue";
 import RankingsFriends from "../src/components/RankingsFriends.vue";
 import UserProfile from "../src/components/UserProfile.vue";
@@ -52,6 +53,11 @@ export default new Router({
       path: "/worldmap",
       name: "worldmap",
       component: WorldMap,
+    },
+    {
+      path: "/myaccount/statistics",
+      name: "statistics",
+      component: Statistics,
     },
   ],
   mode: "history",

@@ -1,0 +1,74 @@
+{
+  "recyclingHistory": [
+    {
+      "timestamp": 1605098617565,
+      "plasticType": 0,
+      "dimensions": [
+        10,
+        10,
+        21
+      ],
+      "density": 3,
+      "weight": 73,
+      "emissionSaved": 3,
+      "bin": 651,
+      "receiver": "3PGfXB5bEz7EkbtGMNUYop5aior5X6bUbvL"
+    },
+    {
+      "timestamp": 1605098617565,
+      "plasticType": 0,
+      "dimensions": [
+        10,
+        10,
+        21
+      ],
+      "density": 3,
+      "weight": 56,
+      "emissionSaved": 2.2,
+      "bin": 1,
+      "receiver": "3PGfXB5bEz7EkbtGMNUYop5aior5X6bUbvL"
+    },
+    {
+      "timestamp": 1605098619565,
+      "plasticType": 2,
+      "dimensions": [
+        10,
+        10,
+        21
+      ],
+      "density": 3,
+      "weight": 62,
+      "emissionSaved": 2.4,
+      "bin": 213,
+      "receiver": "3PBSHtr4znZEEjCkgxd1CzGXT18m9eFdpYH"
+    },
+    {
+      "timestamp": 1605098619565,
+      "plasticType": 2,
+      "dimensions": [
+        10,
+        10,
+        21
+      ],
+      "density": 3,
+      "weight": 52,
+      "emissionSaved": 1.7,
+      "bin": 59,
+      "receiver": "18De5ZXGrbaRpzSbdyn33MPLpXXHSbJWs2"
+    },
+    {
+      "timestamp": 1605098619565,
+      "plasticType": 2,
+      "dimensions": [
+        10,
+        10,
+        21
+      ],
+      "density": 3,
+      "weight": 53,
+      "emissionSaved": 1.8,
+      "bin": 61,
+      "receiver": "1PTzMGH3rJKnc8TEhw4jnQySXVMicavtC7"
+    }
+  ]
+}

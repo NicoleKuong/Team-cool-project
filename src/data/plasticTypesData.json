@@ -1,0 +1,137 @@
+{
+    "plasicTypes": [
+        {
+            "material": "ABS",
+            "price": [
+                1.75,
+                2.05
+            ],
+            "density": [
+                1030,
+                1060
+            ],
+            "emissionSaved": [
+                2.1,
+                2.32
+            ]
+        },
+        {
+            "material": "CA",
+            "price": [
+                3.38,
+                5.33
+            ],
+            "density": [
+                980,
+                1000
+            ],
+            "emissionSaved": [
+                2.14,
+                2.36
+            ]
+        },
+        {
+            "material": "PA",
+            "price": [
+                3.02,
+                4.45
+            ],
+            "density": [
+                1120,
+                1150
+            ],
+            "emissionSaved": [
+                3.2,
+                4.81
+            ]
+        },
+        {
+            "material": "PC",
+            "price": [
+                "2.06",
+                "2.85"
+            ],
+            "density": [
+                "1190",
+                "1210"
+            ]
+        },
+        {
+            "material": "PE",
+            "price": [
+                "1.42",
+                "1.47"
+            ],
+            "density": [
+                "939",
+                "960"
+            ]
+        },
+        {
+            "material": "PET",
+            "price": [
+                "0.949",
+                "1.18"
+            ],
+            "density": [
+                "1290",
+                "1390"
+            ]
+        },
+        {
+            "material": "PLA",
+            "price": [
+                "1.99",
+                "3.36"
+            ],
+            "density": [
+                "1240",
+                "1270"
+            ]
+        },
+        {
+            "material": "PMMA",
+            "price": [
+                "2.28",
+                "2.87"
+            ],
+            "density": [
+                "2270",
+                "1200"
+            ]
+        },
+        {
+            "material": "POM",
+            "price": [
+                "1.41",
+                "1.58"
+            ],
+            "density": [
+                "1390",
+                "1410"
+            ]
+        },
+        {
+            "material": "PP",
+            "price": [
+                "1.18",
+                "1.22"
+            ],
+            "density": [
+                "895",
+                "909"
+            ]
+        },
+        {
+            "material": "PS",
+            "price": [
+                "1.32",
+                "1.71"
+            ],
+            "density": [
+                "1040",
+                "1050"
+            ]
+        }
+    ]
+}

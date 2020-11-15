@@ -196,7 +196,6 @@ export default {
     }
   }
 }
-
 .v-data-table {
   max-width: 80%;
   margin: auto;

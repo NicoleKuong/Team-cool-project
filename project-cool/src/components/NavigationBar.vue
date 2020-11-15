@@ -34,9 +34,10 @@
           </v-menu>
         </v-toolbar-items>
         <v-spacer />
-        <v-btn icon>
-          <v-icon>fas fa-bell</v-icon>
-        </v-btn>
+
+        <img class="icon" src="../assests/linkedin.png" />
+        <img class="icon" src="../assests/pngegg.png" />
+
         <router-link class="toUserProfile" to="/myaccount">
           <v-btn icon>
             <v-icon>fas fa-user-circle</v-icon>
@@ -85,5 +86,10 @@ export default {
 .logo {
   width: 30px;
   height: 30px;
+}
+.icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
 }
 </style>

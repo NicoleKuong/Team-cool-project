@@ -101,6 +101,7 @@ export default {
 <style scoped lang="scss">
 .ranking {
   &_title {
+    margin-top: 20px;
     text-align: center;
   }
   &_table {

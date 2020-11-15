@@ -1,44 +1,46 @@
 {
-    "bins": [
-        {
-            "country": "India",
-            "colletedPlastic": 245
-        },
-        {
-            "country": "Netherlands",
-            "colletedPlastic": 123
-        },
-        {
-            "country": "Netherlands",
-            "colletedPlastic": 12
-        },
-        {
-            "country": "Netherlands",
-            "colletedPlastic": 445
-        },
-        {
-            "country": "Netherlands",
-            "colletedPlastic": 23
-        },
-        {
-            "country": "Germany",
-            "colletedPlastic": 43
-        },
-        {
-            "country": "Cambodia",
-            "colletedPlastic": 54
-        },
-        {
-            "country": "China",
-            "colletedPlastic": 23
-        },
-        {
-            "country": "France",
-            "colletedPlastic": 43
-        },
-        {
-            "country": "Italy",
-            "colletedPlastic": 89
-        }
-    ]
+  "bins": [
+    {
+      "address": "123 Main Street",
+      "country": "India",
+      "colletedPlastic": 245,
+      "savedEmission": 45
+    },
+    {
+      "address": "234 Second Street",
+      "country": "Korea",
+      "colletedPlastic": 123,
+      "savedEmission": 20
+    },
+    {
+      "address": "345 Third Street",
+      "country": "Vietnam",
+      "colletedPlastic": 12,
+      "savedEmission": 4
+    },
+    {
+      "address": "68 Prince Street",
+      "country": "Netherlands",
+      "colletedPlastic": 23,
+      "savedEmission": 7
+    },
+    {
+      "address": "40 Queen Street",
+      "country": "Germany",
+      "colletedPlastic": 43,
+      "savedEmission": 13
+    },
+    {
+      "address": "11 First Street",
+      "country": "Cambodia",
+      "colletedPlastic": 54,
+      "savedEmission": 15
+    },
+    {
+      "address": "89 Central Street",
+      "country": "China",
+      "colletedPlastic": 680,
+      "savedEmission": 75
+    }
+  ]
 }

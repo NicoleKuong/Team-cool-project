@@ -6,6 +6,8 @@ import Rankings from "../src/components/Rankings.vue";
 import RankingsCountry from "../src/components/RankingsCountry.vue";
 import RankingsFriends from "../src/components/RankingsFriends.vue";
 import UserProfile from "../src/components/UserProfile.vue";
+import SendToken from "../src/components/SendToken.vue";
+import WorldMap from "../src/components/WorldMap.vue";
 
 Vue.use(Router);
 
@@ -40,6 +42,16 @@ export default new Router({
       path: "/myaccount",
       name: "myaccount",
       component: UserProfile,
+    },
+    {
+      path: "/sendtokens",
+      name: "sendToken",
+      component: SendToken,
+    },
+    {
+      path: "/worldmap",
+      name: "worldmap",
+      component: WorldMap,
     },
   ],
   mode: "history",

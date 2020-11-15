@@ -27,17 +27,17 @@
       <template v-slot:default>
         <thead class="ranking_heading">
           <tr>
-            <td>Position</td>
-            <td>Address</td>
-            <td>Recycled plastic (kg)</td>
-            <td>Saved emission (kg)</td>
-            <td>Recycled items</td>
+            <td><p>Position</p></td>
+            <td><p>Address</p></td>
+            <td><p>Recycled plastic (kg)</p></td>
+            <td><p>Saved emission (kg)</p></td>
+            <td><p>Recycled items</p></td>
           </tr>
         </thead>
-        <tbody v-for="user in users" :key="user">
+        <tbody v-for="user in users" :key="user.address">
           <tr>
             <td>{{ users.indexOf(user) + 1 }}</td>
-            <td>{{ user.userId }}</td>
+            <td>{{ user.address }}</td>
             <td>{{ getTotalWeight(user.userId) }}</td>
             <td>{{ getTotalEmissionSaved(user.userId) }}</td>
             <td>{{ getTotalVistedBins(user.userId) }}</td>
@@ -412,6 +412,10 @@ export default {
 
 <style scoped lang="scss">
 .ranking {
+  &_title {
+    margin-top: 20px;
+    text-align: center;
+  }
   &_table {
     width: 80%;
     margin: 30px auto;

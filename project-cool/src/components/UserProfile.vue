@@ -6,7 +6,7 @@
           <v-list-item-icon>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-icon>
-          <router-link to="item.path" class="itemLink">
+          <router-link :to="item.path" class="itemLink">
             <v-list-item-content>
               <v-list-item-title>{{ item.title }}</v-list-item-title>
             </v-list-item-content>

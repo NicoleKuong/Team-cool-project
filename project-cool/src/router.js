@@ -3,6 +3,7 @@ import Router from "vue-router";
 import LandingPage from "../src/components/LandingPage.vue";
 import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
+import Statistics from "../src/components/Statistics.vue";
 import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
 import Statistics from "../src/components/Statistics.vue";
@@ -20,6 +21,11 @@ export default new Router({
       path: "/ranking",
       name: "Rankings",
       component: Rankings,
+    },
+    {
+      path: "/statistics",
+      name: "Statistics",
+      component: Statistics,
     },
     {
       path: "/myaccount/transactions",

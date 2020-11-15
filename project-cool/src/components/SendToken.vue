@@ -24,7 +24,7 @@
         <validation-provider
           v-slot="{ errors }"
           name="amount"
-          rules="required|digits:5"
+          rules="required|digits:2"
         >
           <v-text-field
             v-model="amount"

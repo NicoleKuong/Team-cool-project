@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1 class="world_title">Available Bins in the World</h1>
+    <img class="world_map" src="../assests/worldmap.png" />
     <v-simple-table class="world_table">
       <template v-slot:default>
         <thead class="world_heading">
@@ -21,7 +22,6 @@
         </tbody>
       </template>
     </v-simple-table>
-    <img class="world_map" src="../assests/worldmap.png" />
   </div>
 </template>
 

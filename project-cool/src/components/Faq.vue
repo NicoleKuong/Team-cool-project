@@ -14,7 +14,7 @@
           By participating in Project Cool you will not only support the
           project. You are also helping the environment out by clearing it from
           all the plastic waste. You can find the bins that are located around
-          the world on the <a href="/world-map">World map page</a>.
+          the world on the <a href="/worldmap">World map page</a>.
         </v-card-subtitle>
       </v-card>
 
@@ -28,7 +28,7 @@
           CAN'T succeed without your help. We will take care of the application,
           the bins and the investors. So that you can take care of all the
           plastic waste. You can read more about Project Cool on our
-          <a href="/about">About page</a>
+          <a href="/">About page</a>
         </v-card-subtitle>
       </v-card>
 

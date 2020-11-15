@@ -5,9 +5,14 @@
       <div class="balance_detail">
         <div>My Balance</div>
         <div><strong>COOL</strong><span class="balance_total">-2.0</span></div>
+        <span><v-btn class="balance_btn">BUY</v-btn></span>
+        <span><v-btn class="balance_btn">SELL</v-btn></span>
+
         <div><strong>SAVER</strong><span class="balance_total">0.4</span></div>
+        <span><v-btn class="balance_btn">BUY</v-btn></span>
+        <span><v-btn class="balance_btn">SELL</v-btn></span>
       </div>
-      <form @submit.prevent="submit">
+      <form @submit.prevent="submit" class="balance_form">
         <validation-provider
           v-slot="{ errors }"
           name="name"
@@ -127,7 +132,7 @@ export default {
 .sendToken {
   &_form {
     position: fixed;
-    top: 20%;
+    top: 13%;
     left: 35%;
     width: 400px;
   }
@@ -141,5 +146,9 @@ export default {
 .balance_detail {
   font-weight: bold;
   color: black;
+}
+.balance_btn {
+  margin-right: 8px;
+  min-width: 0;
 }
 </style>

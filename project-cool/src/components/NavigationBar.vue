@@ -52,7 +52,6 @@ export default {
     return {
       appTitle: "Project Cool",
       menuItems: [
-        { title: "Balance", path: "/balance" },
         { title: "Ranking", path: "/ranking" },
         { title: "World Map", path: "/worldmap" },
         { title: "Send Tokens", path: "/sendtokens" },

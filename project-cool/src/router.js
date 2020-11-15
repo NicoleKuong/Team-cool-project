@@ -10,6 +10,7 @@ import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
 import WorldMap from "../src/components/WorldMap.vue";
 import Faq from "../src/components/Faq.vue";
+import Investors from "../src/components/InvestorsPage.vue";
 
 Vue.use(Router);
 
@@ -75,11 +76,11 @@ export default new Router({
       name: "faq",
       component: Faq,
     },
-    // {
-    //   path: "/investors",
-    //   name: "investors",
-    //   component: Investors,
-    // },
+    {
+      path: "/investors",
+      name: "investors",
+      component: Investors,
+    },
     // {
     //   path: "/connect",
     //   name: "connect",

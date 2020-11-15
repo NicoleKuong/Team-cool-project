@@ -4,8 +4,8 @@
     <validation-observer ref="observer" v-slot="{ invalid }">
       <div>
         <div>Balance</div>
-        <div>COOL<span class="balance_total">3.0</span></div>
-        <div>SAVER<span class="balance_total">4.0</span></div>
+        <div><strong>COOL</strong><span class="balance_total">3.0</span></div>
+        <div><strong>SAVER</strong><span class="balance_total">4.0</span></div>
       </div>
       <form @submit.prevent="submit">
         <validation-provider
@@ -24,7 +24,7 @@
         <validation-provider
           v-slot="{ errors }"
           name="amount"
-          rules="required|digits:5"
+          rules="required|digits:2"
         >
           <v-text-field
             v-model="amount"

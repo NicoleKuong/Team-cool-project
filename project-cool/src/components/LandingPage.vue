@@ -1,7 +1,7 @@
 <template>
   <div class="landing_page">
     <h1 class="main-title">
-      Welcome to Project Cool.
+      Welcome to FANplastic.
     </h1>
   </div>
 </template>

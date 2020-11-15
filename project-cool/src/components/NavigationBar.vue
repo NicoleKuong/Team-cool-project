@@ -25,7 +25,9 @@
             </template>
             <v-list>
               <v-list-item v-for="(item, index) in subItems" :key="index">
-                <v-list-item-title>{{ item.title }}</v-list-item-title>
+                <router-link class="toLinks" :to="item.path">
+                  <v-list-item-title>{{ item.title }}</v-list-item-title>
+                </router-link>
               </v-list-item>
             </v-list>
           </v-menu>
@@ -38,7 +40,7 @@
           <v-btn icon>
             <v-icon>fas fa-user-circle</v-icon>
           </v-btn>
-          <span>My profile</span>
+          <span class="profilelink">My profile</span>
         </router-link>
       </v-toolbar>
     </v-card>
@@ -50,7 +52,7 @@ export default {
   name: "NavigationBar",
   data() {
     return {
-      appTitle: "Project Cool",
+      appTitle: "Fanplastic",
       menuItems: [
         { title: "Ranking", path: "/ranking" },
         { title: "World Map", path: "/worldmap" },
@@ -74,6 +76,10 @@ export default {
   }
 }
 .toUserProfile {
+  text-decoration: none;
+  color: white;
+}
+.toLinks {
   text-decoration: none;
 }
 </style>

@@ -4,8 +4,13 @@ import LandingPage from "../src/components/LandingPage.vue";
 import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
 import Statistics from "../src/components/Statistics.vue";
+import RankingsCountry from "../src/components/RankingsCountry.vue";
+import RankingsFriends from "../src/components/RankingsFriends.vue";
 import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
+import WorldMap from "../src/components/WorldMap.vue";
+import Faq from "../src/components/Faq.vue";
+import Investors from "../src/components/InvestorsPage.vue";
 
 Vue.use(Router);
 
@@ -17,14 +22,24 @@ export default new Router({
       component: LandingPage,
     },
     {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
+    },
+    {
       path: "/ranking",
       name: "Rankings",
       component: Rankings,
     },
     {
-      path: "/statistics",
-      name: "Statistics",
-      component: Statistics,
+      path: "/countryranking",
+      name: "RankingsCountry",
+      component: RankingsCountry,
+    },
+    {
+      path: "/friendsranking",
+      name: "RankingsFriends",
+      component: RankingsFriends,
     },
     {
       path: "/myaccount/transactions",
@@ -42,10 +57,35 @@ export default new Router({
       component: SendToken,
     },
     {
-      path: "/statistics",
-      name: "Statistics",
+      path: "/worldmap",
+      name: "worldmap",
+      component: WorldMap,
+    },
+    {
+      path: "/myaccount/statistics",
+      name: "statistics",
       component: Statistics,
-    }
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
+    },
+    {
+      path: "/investors",
+      name: "investors",
+      component: Investors,
+    },
+    // {
+    //   path: "/connect",
+    //   name: "connect",
+    //   component: Connect,
+    // },
   ],
   mode: "history",
 });

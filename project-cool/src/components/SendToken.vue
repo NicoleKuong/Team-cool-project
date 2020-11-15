@@ -1,11 +1,11 @@
 <template>
   <div class="sendToken_form">
-    <h3>Send Tokens</h3>
+    <h1 class="sendToken_title">Send Tokens</h1>
     <validation-observer ref="observer" v-slot="{ invalid }">
-      <div>
-        <div>Balance</div>
-        <div><strong>COOL</strong><span class="balance_total">3.0</span></div>
-        <div><strong>SAVER</strong><span class="balance_total">4.0</span></div>
+      <div class="balance_detail">
+        <div>My Balance</div>
+        <div><strong>COOL</strong><span class="balance_total">-2.0</span></div>
+        <div><strong>SAVER</strong><span class="balance_total">0.4</span></div>
       </div>
       <form @submit.prevent="submit">
         <validation-provider
@@ -131,8 +131,15 @@ export default {
     left: 35%;
     width: 400px;
   }
+  &_title {
+    text-align: center;
+  }
 }
 .balance_total {
-  margin-left: 330px;
+  margin-left: 320px;
+}
+.balance_detail {
+  font-weight: bold;
+  color: black;
 }
 </style>

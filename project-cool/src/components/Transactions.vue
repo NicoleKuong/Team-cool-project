@@ -27,7 +27,7 @@
       >
     </div>
 
-    <v-simple-table width="50%">
+    <v-simple-table width="50%" class="transactions_table">
       <template v-slot:default>
         <tbody v-for="tx in showTransactions" :key="tx.id">
           <tr :class="getCssTransactionStatus(tx.sender, tx.recipient)">
@@ -176,6 +176,9 @@ export default {
   }
   &_balance {
     text-align: center;
+  }
+  &_table {
+    margin-bottom: 20px;
   }
   &_button {
     text-align: center;

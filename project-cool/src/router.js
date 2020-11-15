@@ -5,6 +5,7 @@ import Transactions from "../src/components/Transactions.vue";
 import Rankings from "../src/components/Rankings.vue";
 import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
+import Statistics from "../src/components/Statistics.vue";
 
 Vue.use(Router);
 
@@ -35,6 +36,11 @@ export default new Router({
       name: "sendToken",
       component: SendToken,
     },
+    {
+      path: "/statistics",
+      name: "Statistics",
+      component: Statistics,
+    }
   ],
   mode: "history",
 });

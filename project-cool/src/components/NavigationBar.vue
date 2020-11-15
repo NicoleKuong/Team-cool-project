@@ -55,6 +55,7 @@ export default {
         { title: "Ranking", path: "/ranking" },
         { title: "World Map", path: "/worldmap" },
         { title: "Send Tokens", path: "/sendtokens" },
+        { title: "Statistics", path: "/statistics"}
       ],
       subItems: [
         { title: "FAQ", path: "/faq" },

@@ -88,83 +88,83 @@
       <template v-slot:default>
         <thead class="statistics_heading">
           <tr>
-            <td><p>Date</p></td>
-            <td><p>Time</p></td>
-            <td><p>Plastic Type</p></td>
-            <td><p>Dimensions (cm)</p></td>
-            <td><p>Weight (g)</p></td>
-            <td><p>Bin #</p></td>
-            <td><p>Bin Country</p></td>
-            <td><p>Got COOLs</p></td>
-            <td><p>Got SAVERs</p></td>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Plastic Type</th>
+            <th>Dimensions (cm)</th>
+            <th>Weight (g)</th>
+            <th>Bin #</th>
+            <th>Bin Country</th>
+            <th>Got COOLs</th>
+            <th>Got SAVERs</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><p>2020-11-20</p></td>
-            <td><p>12:39</p></td>
-            <td><p>PP</p></td>
-            <td><p>2 x 10 x 5</p></td>
-            <td><p>800</p></td>
-            <td><p>51</p></td>
-            <td><p>Italy</p></td>
-            <td><p>1.20</p></td>
-            <td><p>1.26</p></td>
+            <td>2020-11-20</td>
+            <td>12:39</td>
+            <td>PP</td>
+            <td>2 x 10 x 5</td>
+            <td>800</td>
+            <td>51</td>
+            <td>Italy</td>
+            <td>1.20</td>
+            <td>1.26</td>
           </tr>
           <tr>
-            <td><p>2020-11-27</p></td>
-            <td><p>12:41</p></td>
-            <td><p>PP</p></td>
-            <td><p>14 x 10 x 20</p></td>
-            <td><p>741</p></td>
-            <td><p>12</p></td>
-            <td><p>Italy</p></td>
-            <td><p>1.51</p></td>
-            <td><p>1.6</p></td>
+            <td>2020-11-27</td>
+            <td>12:41</td>
+            <td>PP</td>
+            <td>14 x 10 x 20</td>
+            <td>741</td>
+            <td>12</td>
+            <td>Italy</td>
+            <td>1.51</td>
+            <td>1.6</td>
           </tr>
           <tr>
-            <td><p>2020-12-10</p></td>
-            <td><p>17:39</p></td>
-            <td><p>PP</p></td>
-            <td><p>21 x 5 x 5</p></td>
-            <td><p>360</p></td>
-            <td><p>51</p></td>
-            <td><p>Italy</p></td>
-            <td><p>1.18</p></td>
-            <td><p>1.22</p></td>
+            <td>2020-12-10</td>
+            <td>17:39</td>
+            <td>PP</td>
+            <td>21 x 5 x 5</td>
+            <td>360</td>
+            <td>51</td>
+            <td>Italy</td>
+            <td>1.18</td>
+            <td>1.22</td>
           </tr>
           <tr>
-            <td><p>2020-12-28</p></td>
-            <td><p>19:32</p></td>
-            <td><p>CA</p></td>
-            <td><p>12 x 10 x 5</p></td>
-            <td><p>244</p></td>
-            <td><p>14</p></td>
-            <td><p>Italy</p></td>
-            <td><p>3.38</p></td>
-            <td><p>5.33</p></td>
+            <td>2020-12-28</td>
+            <td>19:32</td>
+            <td>CA</td>
+            <td>12 x 10 x 5</td>
+            <td>244</td>
+            <td>14</td>
+            <td>Italy</td>
+            <td>3.38</td>
+            <td>5.33</td>
           </tr>
           <tr>
-            <td><p>2020-12-29</p></td>
-            <td><p>11:34</p></td>
-            <td><p>CA</p></td>
-            <td><p>2 x 1 x 15</p></td>
-            <td><p>128</p></td>
-            <td><p>14</p></td>
-            <td><p>Italy</p></td>
-            <td><p>3.40</p></td>
-            <td><p>5.38</p></td>
+            <td>2020-12-29</td>
+            <td>11:34</td>
+            <td>CA</td>
+            <td>2 x 1 x 15</td>
+            <td>128</td>
+            <td>14</td>
+            <td>Italy</td>
+            <td>3.40</td>
+            <td>5.38</td>
           </tr>
           <tr>
-            <td><p>2020-12-30</p></td>
-            <td><p>11:09</p></td>
-            <td><p>ABS</p></td>
-            <td><p>10 x 10 x 15</p></td>
-            <td><p>512</p></td>
-            <td><p>14</p></td>
-            <td><p>Italy</p></td>
-            <td><p>1.75</p></td>
-            <td><p>2.05</p></td>
+            <td>2020-12-30</td>
+            <td>11:09</td>
+            <td>ABS</td>
+            <td>10 x 10 x 15</td>
+            <td>512</td>
+            <td>14</td>
+            <td>Italy</td>
+            <td>1.75</td>
+            <td>2.05</td>
           </tr>
         </tbody>
       </template>

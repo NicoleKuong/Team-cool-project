@@ -52,7 +52,7 @@ export default {
   name: "NavigationBar",
   data() {
     return {
-      appTitle: "Project Cool",
+      appTitle: "Fanplastic",
       menuItems: [
         { title: "Ranking", path: "/ranking" },
         { title: "World Map", path: "/worldmap" },

@@ -80,7 +80,7 @@ export default {
       transactionsHistory: transactionData.transaction,
       userAddress: "3PBSHtr4znZEEjCkgxd1CzGXT18m9eFdpYH",
       marketValueSaverUSD: 1.45,
-      showTransactions: [],
+      showTransactions: transactionData.transaction,
     };
   },
   methods: {

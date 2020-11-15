@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import LandingPage from '../src/components/LandingPage.vue';
+// import LandingPage from '../src/components/LandingPage.vue';
 import Transactions from '../src/components/Transactions.vue';
 import Rankings from '../src/components/Rankings.vue';
 import Statistics from '../src/components/Statistics.vue';
@@ -20,7 +20,7 @@ export default new Router({
     {
       path: '/',
       name: 'landingPage',
-      component: LandingPage,
+      component: About,
     },
     {
       path: '/faq',
@@ -68,15 +68,25 @@ export default new Router({
       component: Statistics,
     },
     {
+      path: '/faq',
+      name: 'faq',
+      component: Faq,
+    },
+    {
+      path: '/faq',
+      name: 'faq',
+      component: Faq,
+    },
+    {
       path: '/investors',
       name: 'investors',
       component: Investors,
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: About,
-    },
+    // {
+    //   path: "/connect",
+    //   name: "connect",
+    //   component: Connect,
+    // },
   ],
   mode: 'history',
 });

@@ -9,6 +9,7 @@ import RankingsFriends from "../src/components/RankingsFriends.vue";
 import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
 import WorldMap from "../src/components/WorldMap.vue";
+import Faq from "../src/components/Faq.vue";
 
 Vue.use(Router);
 
@@ -18,6 +19,11 @@ export default new Router({
       path: "/",
       name: "landingPage",
       component: LandingPage,
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
     },
     {
       path: "/ranking",

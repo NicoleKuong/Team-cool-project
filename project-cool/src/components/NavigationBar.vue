@@ -4,6 +4,7 @@
       <v-toolbar dark color="blue-grey darken-1" class="hidden-xs-and-down">
         <v-toolbar-title>
           <router-link to="/" tag="span" style="cursor: pointer">
+            <img class="logo" src="../assests/logo.png" />
             {{ appTitle }}
           </router-link>
         </v-toolbar-title>
@@ -57,7 +58,6 @@ export default {
         { title: "Ranking", path: "/ranking" },
         { title: "World Map", path: "/worldmap" },
         { title: "Send Tokens", path: "/sendtokens" },
-        { title: "Statistics", path: "/statistics"}
       ],
       subItems: [
         { title: "FAQ", path: "/faq" },
@@ -81,5 +81,9 @@ export default {
 }
 .toLinks {
   text-decoration: none;
+}
+.logo {
+  width: 30px;
+  height: 30px;
 }
 </style>

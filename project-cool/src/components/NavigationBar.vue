@@ -62,7 +62,7 @@ export default {
       subItems: [
         { title: "FAQ", path: "/faq" },
         { title: "Investors", path: "/investors" },
-        { title: "Connect", path: "/connect" },
+        { title: "Contact", path: "/contact" },
       ],
     };
   },

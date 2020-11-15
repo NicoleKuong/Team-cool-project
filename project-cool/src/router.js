@@ -12,6 +12,7 @@ import WorldMap from '../src/components/WorldMap.vue';
 import Faq from '../src/components/Faq.vue';
 import Investors from '../src/components/InvestorsPage.vue';
 import About from '../src/components/AboutPage.vue';
+import Contact from '../src/components/Contacts.vue';
 
 Vue.use(Router);
 
@@ -82,11 +83,11 @@ export default new Router({
       name: 'investors',
       component: Investors,
     },
-    // {
-    //   path: "/connect",
-    //   name: "connect",
-    //   component: Connect,
-    // },
+    {
+      path: "/contact",
+      name: "contact",
+      component: Contact,
+    },
   ],
   mode: 'history',
 });

@@ -6,7 +6,6 @@ import Rankings from "../src/components/Rankings.vue";
 import Statistics from "../src/components/Statistics.vue";
 import UserProfile from "../src/components/UserProfile.vue";
 import SendToken from "../src/components/SendToken.vue";
-import Statistics from "../src/components/Statistics.vue";
 
 Vue.use(Router);
 

@@ -1,10 +1,16 @@
 <template>
   <v-container class="about">
     <center>
-      <h1>What is this project all about?</h1>
+      <v-img
+        contain
+        width="200"
+        height="200"
+        src="./../assests/logo.png"
+      ></v-img>
       <h2>
         <i>"Reducing CO2 emissions due to preventing plastic pollution"</i>
       </h2>
+      <h1>What is this project all about?</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
         venenatis, dolor eget fringilla fringilla, nisi erat congue tellus,

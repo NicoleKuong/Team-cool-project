@@ -151,94 +151,124 @@
       <v-row>
         <v-col>
           <v-card>
-            <v-img src="https://placeimg.com/180/180/asdaefsadf"></v-img>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/saxion logo.jpg"
+            ></v-img>
             <v-card-title class="justify-center">
-              Small partner 1
+              <h5>Saxion</h5>
             </v-card-title>
             <v-card-actions>
               <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
+                <a href="https://www.saxion.edu/" target="_blank"> Website </a>
               </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
         <v-col>
           <v-card>
-            <v-img src="https://placeimg.com/180/180/asdfasdfs"></v-img>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/serey logo.png"
+            ></v-img>
+            <v-card-title class="justify-center"> <h5>Serey</h5> </v-card-title>
+            <v-card-actions>
+              <v-btn class="mx-auto" outlined rounded text>
+                <a href="https://serey.io/about-us" target="_blank">
+                  Website
+                </a>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col>
+          <v-card>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/eu logo.png"
+            ></v-img>
+            <v-card-title class="justify-center"> <h5>EU</h5> </v-card-title>
+            <v-card-actions>
+              <v-btn class="mx-auto" outlined rounded text>
+                <a
+                  href="https://ec.europa.eu/clima/policies/ets_en"
+                  target="_blank"
+                >
+                  Website
+                </a>
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+        <v-col>
+          <v-card>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/Logo Oxfam Cambodia.png"
+            ></v-img>
             <v-card-title class="justify-center">
-              Small partner 2
+              <h5>Oxfam Cambodia</h5>
             </v-card-title>
             <v-card-actions>
               <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
+                <a href="https://cambodia.oxfam.org/" target="_blank">
+                  Website
+                </a>
               </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
         <v-col>
           <v-card>
-            <v-img src="https://placeimg.com/180/180/asdfaeasf"></v-img>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/Cambodian Childrens Fund.jpg"
+            ></v-img>
             <v-card-title class="justify-center">
-              Small partner 3
+              <h5>Cambodian Childrens Fund</h5>
             </v-card-title>
             <v-card-actions>
               <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
+                <a
+                  href="https://www.cambodianchildrensfund.org/"
+                  target="_blank"
+                >
+                  Website
+                </a>
               </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
         <v-col>
           <v-card>
-            <v-img src="https://placeimg.com/180/180/asdfasdse"></v-img>
-            <v-card-title class="justify-center"> Small partner 4</v-card-title>
+            <v-img
+              contains
+              class="mx-auto"
+              width="265"
+              height="265"
+              src="./../assests/partners/Phnom Penh Municipality.png"
+            ></v-img>
+            <v-card-title class="justify-center">
+              <h5>Phnom Penh Municipality</h5>
+            </v-card-title>
             <v-card-actions>
               <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card>
-            <v-img src="https://placeimg.com/180/180/asfasdfa"></v-img>
-            <v-card-title class="justify-center"> Small partner 5</v-card-title>
-            <v-card-actions>
-              <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card>
-            <v-img src="https://placeimg.com/180/180/anyhj"></v-img>
-            <v-card-title class="justify-center"> Small partner 6</v-card-title>
-            <v-card-actions>
-              <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card>
-            <v-img src="https://placeimg.com/180/180/logo7"></v-img>
-            <v-card-title class="justify-center"> Small partner 7</v-card-title>
-            <v-card-actions>
-              <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
-              </v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-col>
-        <v-col>
-          <v-card>
-            <v-img src="https://placeimg.com/180/180/logo8"></v-img>
-            <v-card-title class="justify-center"> Small partner 8</v-card-title>
-            <v-card-actions>
-              <v-btn class="mx-auto" outlined rounded text>
-                <a href=""> Website </a>
+                <a href="http://phnompenh.gov.kh/" target="_blank"> Website </a>
               </v-btn>
             </v-card-actions>
           </v-card>

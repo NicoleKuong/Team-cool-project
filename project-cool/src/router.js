@@ -65,6 +65,26 @@ export default new Router({
       name: "statistics",
       component: Statistics,
     },
+    {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      component: Faq,
+    },
+    // {
+    //   path: "/investors",
+    //   name: "investors",
+    //   component: Investors,
+    // },
+    // {
+    //   path: "/connect",
+    //   name: "connect",
+    //   component: Connect,
+    // },
   ],
   mode: "history",
 });

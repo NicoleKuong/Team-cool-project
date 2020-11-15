@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-navigation-drawer class="user_sidebar" fixed permanent left light>
+    <v-navigation-drawer class="user_sidebar" fixed permanent left dark>
       <v-list>
         <v-list-item v-for="item in items" :key="item.title">
           <v-list-item-icon>
@@ -15,21 +15,25 @@
       </v-list>
     </v-navigation-drawer>
     <div class="user_info" v-for="user in users" :key="user.id">
-      <img
-        class="user_img"
-        src="https://randomuser.me/api/portraits/women/81.jpg"
-      />
+      <img class="user_img" src="../assests/profilepic.png" />
       <div>
-        <div class="user_detail">User Name: {{ user.userName }}</div>
-        <div class="user_detail">Wallet Address: {{ user.walletAddress }}</div>
         <div class="user_detail">
-          Total token worth: {{ user.totalTokenWorth }}
+          <strong>Name:</strong> <br />{{ user.userName }}
         </div>
         <div class="user_detail">
-          Emission token balance: {{ user.emissionTokenBalance }}
+          <strong>Wallet Address: </strong> <br />{{ user.walletAddress }}
         </div>
         <div class="user_detail">
-          Plastic Token balance: {{ user.plasticTokenBalance }}
+          <strong>Total token worth: </strong>
+          <br />{{ user.totalTokenWorth }}
+        </div>
+        <div class="user_detail">
+          <strong>Emission token balance:</strong>
+          <br />{{ user.emissionTokenBalance }}
+        </div>
+        <div class="user_detail">
+          <strong>Plastic Token balance:</strong> <br />
+          {{ user.plasticTokenBalance }}
         </div>
       </div>
     </div>
@@ -43,7 +47,7 @@ export default {
     return {
       users: [
         {
-          userName: "Frank Mouldings",
+          userName: "Mia Mouldings",
           id: 1,
           tokenBalance: 100,
           totalTokenWorth: "1324$",
@@ -75,6 +79,9 @@ export default {
     width: 100px;
     max-height: 100vh;
     position: sticky;
+
+    color: darkgreen;
+    background-color: #2e5eaa;
   }
   &_info {
     margin-left: 400px;
@@ -85,7 +92,8 @@ export default {
     height: 200px;
   }
   &_detail {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
 }
 .itemLink {

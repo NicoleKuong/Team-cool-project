@@ -78,7 +78,7 @@ export default {
 <style scoped lang="scss">
 .ranking {
   &_table {
-    width: 80%;
+    width: 60%;
     margin: 30px auto;
     border: 1px solid black;
   }

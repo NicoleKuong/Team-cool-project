@@ -11,6 +11,7 @@ import SendToken from '../src/components/SendToken.vue';
 import WorldMap from '../src/components/WorldMap.vue';
 import Faq from '../src/components/Faq.vue';
 import Investors from '../src/components/InvestorsPage.vue';
+import About from '../src/components/AboutPage.vue';
 
 Vue.use(Router);
 
@@ -70,6 +71,11 @@ export default new Router({
       path: '/investors',
       name: 'investors',
       component: Investors,
+    },
+    {
+      path: '/about',
+      name: 'about',
+      component: About,
     },
   ],
   mode: 'history',

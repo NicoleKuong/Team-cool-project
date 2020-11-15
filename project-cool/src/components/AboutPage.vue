@@ -12,7 +12,7 @@
       </h2>
       <h1>What is this project all about?</h1>
 
-      <v-card class="ma-3 pa-3">
+      <v-card class="mx-3 my-5 px-3 py-5">
         <h3 class="py-2">THE PROBLEM</h3>
         <p>
           The production, use and disposal of plastic produce prodigious amounts
@@ -33,7 +33,7 @@
         </p>
       </v-card>
 
-      <v-card class="ma-3 pa-3">
+      <v-card class="mx-3 my-5 px-3 py-5">
         <h3 class="py-2">OUR SOLUTION</h3>
         <p>
           We propose a network of <b>smart bins</b> connected to the internet
@@ -107,7 +107,7 @@
         </p>
       </v-card>
 
-      <v-card class="ma-3 pa-3">
+      <v-card class="mx-3 my-5 px-3 py-5">
         <h3 class="py-2">OUR PRODUCT</h3>
         <v-row>
           <v-col>
@@ -137,7 +137,7 @@
         </v-row>
       </v-card>
 
-      <v-card class="ma-3 pa-3">
+      <v-card class="mx-3 my-5 px-3 py-5">
         <h3 class="py-2">LONG TERM VISION</h3>
         <p>
           On long term we foresee an autonomous ecosystem that sustains its own
@@ -156,7 +156,7 @@
         </p>
       </v-card>
 
-      <v-card class="ma-3 pa-3">
+      <v-card class="mx-3 my-5 px-3 py-5">
         <h3 class="py-2">ADOPTION ECOSYSTEM</h3>
         <p>
           <b>PILOT GOAL:</b> take 6 months to have commitment from a handful of
